@@ -14,6 +14,11 @@ module.exports = {
   },
    module: {
      rules: [
+       {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: ['babel-loader']
+      },
       {
         test: /\.css$/,
         use: [
@@ -26,7 +31,10 @@ module.exports = {
          use: [
            'file-loader'
          ]
-       }
+      }
     ]
-  }
+  },
+  resolve: { // Do I need this?
+    extensions: ['*', '.js', '.jsx']
+  },
 };
