@@ -1,4 +1,5 @@
 const path = require("path");
+const webpack = require('webpack');
 
 module.exports = {
   entry: {
@@ -9,8 +10,12 @@ module.exports = {
     path: path.resolve(__dirname, "dist")
   },
   devtool: "inline-source-map",
+  plugins: [
+    new webpack.HotModuleReplacementPlugin()
+  ],
   devServer: {
-    contentBase: './dist'
+    contentBase: './dist',
+    hot: true
   },
    module: {
      rules: [

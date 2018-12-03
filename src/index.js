@@ -1,13 +1,14 @@
-import _ from "lodash";
+import ReactDOM from 'react-dom';
+import React from 'react';
 import './style.css';
+//import reset css
 
-function component() {
-  let element = document.createElement("div");
+const title = 'My React Webpack Babel Basic Setup';
 
-  element.innerHTML = _.join(["Hello", "webpack"], " ");
-  element.classList.add("hello");
+ReactDOM.render(
+  <div>{title}</div>,
+  document.getElementById('app')
+);
 
-  return element;
-}
-
-document.body.appendChild(component());
+//take this out of here
+module.hot.accept();
