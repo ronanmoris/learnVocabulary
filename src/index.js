@@ -1,11 +1,12 @@
 import ReactDOM from 'react-dom';
 import React from 'react';
+import App from './components/App.js'
 import './style.css';
 
 const title = 'My React Webpack Babel Basic Setup';
 
 ReactDOM.render(
-  <div>{title}</div>,
+  <App />,
   document.getElementById('app')
 );
 
