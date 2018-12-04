@@ -1,7 +1,6 @@
 import ReactDOM from 'react-dom';
 import React from 'react';
 import './style.css';
-//import reset css
 
 const title = 'My React Webpack Babel Basic Setup';
 
@@ -11,4 +10,6 @@ ReactDOM.render(
 );
 
 //take this out of here
-module.hot.accept();
+if(module.hot) {
+	module.hot.accept();
+}
